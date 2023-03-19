@@ -1,0 +1,6 @@
+.DS_Store
+coverage
+lib/*.cjs
+lib/*.map
+lib/*.min.*
+node_modules
