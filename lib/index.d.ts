@@ -70,17 +70,17 @@ interface PatternPart {
  * @example
  * // Represent 11 February 2014 in middle-endian format
  * simplifyDateTimePatternToParts('MM/dd/yyyy')
- * //=> { type: 'month', value: 'mm',
- *        type: 'literal', value: '/',
- *        type; 'day', value: 'dd',
- *        type: 'literal', value: '/',
- *        type: 'year': value: 'yyyy' }
+ * //=> [{ type: 'month', value: 'mm',
+ *         type: 'literal', value: '/',
+ *         type; 'day', value: 'dd',
+ *         type: 'literal', value: '/',
+ *         type: 'year': value: 'yyyy' }]
  *
  * @example
  * // Escape string by single quote characters
  * simplifyDateTimePatternToParts("h 'o''clock'")
- * //=> { type: 'hour', value: 'hh',
- *        type: 'literal', value: ' o\'clock' }
+ * //=> [{ type: 'hour', value: 'hh',
+ *         type: 'literal', value: ' o\'clock' }]
  */
 export function simplifyDateTimePatternToParts(pattern: string): PatternPart[]
 

@@ -98,11 +98,11 @@ import { simplifyDateTimePatternToParts } from 'datetime-placeholder'
 
 const placeholder = simplifyDateTimePatternToParts('M/d/yy')
 console.log(placeholder) // prints the following:
-// { type: 'month', value: 'mm',
-//   type: 'literal', value: '/',
-//   type; 'day', value: 'dd',
-//   type: 'literal', value: '/',
-//   type: 'year': value: 'yy' }
+// [{ type: 'month', value: 'mm',
+//    type: 'literal', value: '/',
+//    type; 'day', value: 'dd',
+//    type: 'literal', value: '/',
+//    type: 'year': value: 'yy' }]
 ```
 
 ## Pattern Conversion
