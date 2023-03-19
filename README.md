@@ -1,4 +1,4 @@
-# DateTime Locale Patterns
+# DateTime Pattern Placeholder
 
 [![Latest version](https://img.shields.io/npm/v/datetime-placeholder)
  ![Dependency status](https://img.shields.io/librariesio/release/npm/datetime-placeholder)
