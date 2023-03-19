@@ -87,16 +87,18 @@
     "typescript": "5.0.2"
   },
   "keywords": [
-    "intl",
     "date",
     "time",
     "datetime",
-    "locale",
+    "date-time",
     "pattern",
     "placeholder",
     "picker",
+    "datetime-picker",
+    "datetimepicker",
+    "date-picker",
+    "datepicker",
     "format",
-    "cldr",
     "unicode",
     "ldml"
   ]
