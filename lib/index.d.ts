@@ -1,7 +1,7 @@
 /**
  * An object describing a part of a pattern.
  */
-interface PatternPart {
+export interface PatternPart {
   /**
    * A type of the part compatible with [Intl.DateTiemFormat:formatToParts](
    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts).
@@ -12,6 +12,17 @@ interface PatternPart {
    * The textual part of the pattern.
    */
   value: string
+}
+
+/**
+ * An object with the options to control the pattern simplification.
+ */
+export interface SimplifyOptions {
+  /**
+   * If the leters in the simplified pattern should be all lowercase or uppercase.
+   * @default 'lowercase'
+   */
+  letterCase?: 'lowercase' | 'uppercase'
 }
 
 /**
@@ -82,7 +93,7 @@ interface PatternPart {
  * //=> [{ type: 'hour', value: 'hh',
  *         type: 'literal', value: ' o\'clock' }]
  */
-export function simplifyDateTimePatternToParts(pattern: string): PatternPart[]
+export function simplifyDateTimePatternToParts(pattern: string, options?: SimplifyOptions): PatternPart[]
 
 /**
  * Returns a simplified pattern to show to the end-user in a date/time picker.
@@ -146,4 +157,4 @@ export function simplifyDateTimePatternToParts(pattern: string): PatternPart[]
  * simplifyDateTimePattern("h 'o''clock'")
  * //=> "hh o'clock"
  */
-export function simplifyDateTimePattern(pattern: string): string
+export function simplifyDateTimePattern(pattern: string, options?: SimplifyOptions): string

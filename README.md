@@ -74,7 +74,7 @@ Or using an AMD module loader:
 
 ## API
 
-### simplifyDateTimePattern(pattern)
+### simplifyDateTimePattern(pattern, options?)
 
 Returns a simplified pattern to show to the end-user in a date/time picker.
 
@@ -87,7 +87,7 @@ const placeholder = simplifyDateTimePattern('M/d/yy')
 console.log(placeholder) // prints 'mm/dd/yy'
 ```
 
-### simplifyDateTimePatternToParts(pattern)
+### simplifyDateTimePatternToParts(pattern, options?)
 
 Returns a simplified pattern to show to the end-user in a date/time picker as an array of parts, which values are supposed to be concatenated together.
 
@@ -104,6 +104,15 @@ console.log(placeholder) // prints the following:
 //    type: 'literal', value: '/',
 //    type: 'year': value: 'yy' }]
 ```
+
+### Options
+
+The pattern simplification can be customised by an optional parameter - an object with the following properties:
+
+| Name         | Default       | Description |
+|:-------------|:--------------|:------------|
+| `letterCase` | `'lowercase'` | if the pattern should be rendered lowercase (`'lowercase'`) or uppercase (`'uppercase'`) |
+
 
 ## Pattern Conversion
 
@@ -157,8 +166,8 @@ simplifyDateTimePattern('MM/dd/yyyy')
 
 ```js
 // Escape string by single quote characters
-simplifyDateTimePattern("h 'o''clock'")
-//=> "hh o'clock"
+simplifyDateTimePattern("h 'o''clock'", { letterCase: 'uppercase' })
+//=> "HH o'clock"
 ```
 
 ## Contributing

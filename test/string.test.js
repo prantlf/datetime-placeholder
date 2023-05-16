@@ -53,3 +53,10 @@ test('time zone', () => {
     'zz zz zz zz zz zz zz zz zz zz zz zz zz zz zz zz zz zz zz zz zz'
   )
 })
+
+test('uppercase', () => {
+  strictEqual(
+    simplifyDateTimePattern('G E y M d H m s S a z', { letterCase: 'uppercase' }),
+    'EE WWW YYYY MM DD HH MM SS MMM AA ZZ'
+  )
+})

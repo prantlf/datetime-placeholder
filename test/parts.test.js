@@ -90,3 +90,30 @@ test('time zone', () => {
     { type: 'timeZoneName', value: 'zz' }
   ])
 })
+
+test('uppercase', () => {
+  deepStrictEqual(
+    simplifyDateTimePatternToParts('G E y M d H m s S a z', { letterCase: 'uppercase' }), [
+      { type: 'era', value: 'EE' },
+      { type: 'literal', value: ' ' },
+      { type: 'weekday', value: 'WWW' },
+      { type: 'literal', value: ' ' },
+      { type: 'year', value: 'YYYY' },
+      { type: 'literal', value: ' ' },
+      { type: 'month', value: 'MM' },
+      { type: 'literal', value: ' ' },
+      { type: 'day', value: 'DD' },
+      { type: 'literal', value: ' ' },
+      { type: 'hour', value: 'HH' },
+      { type: 'literal', value: ' ' },
+      { type: 'minute', value: 'MM' },
+      { type: 'literal', value: ' ' },
+      { type: 'second', value: 'SS' },
+      { type: 'literal', value: ' ' },
+      { type: 'fractionalSecond', value: 'MMM' },
+      { type: 'literal', value: ' ' },
+      { type: 'dayPeriod', value: 'AA' },
+      { type: 'literal', value: ' ' },
+      { type: 'timeZoneName', value: 'ZZ' }
+  ])
+})

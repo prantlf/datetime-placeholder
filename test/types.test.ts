@@ -4,6 +4,10 @@ type testCallback = () => void
 declare function test (label: string, callback: testCallback): void
 
 test('Type declarations for TypeScript', () => {
-  const _placeholder: string = simplifyDateTimePattern('G')
-  const _parts: PatternPart[] = simplifyDateTimePatternToParts('G')
+  let _placeholder: string = simplifyDateTimePattern('G')
+  _placeholder = simplifyDateTimePattern('G', {})
+  _placeholder = simplifyDateTimePattern('G', { letterCase: 'uppercase' })
+  let _parts: PatternPart[] = simplifyDateTimePatternToParts('G')
+  _parts = simplifyDateTimePatternToParts('G', {})
+  _parts = simplifyDateTimePatternToParts('G', { letterCase: 'uppercase' })
 })

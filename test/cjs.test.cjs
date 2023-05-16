@@ -6,5 +6,5 @@ test('exports named functions', () => {
   strictEqual(typeof simplifyDateTimePattern, 'function')
   strictEqual(typeof simplifyDateTimePatternToParts, 'function')
   simplifyDateTimePattern('G')
-  simplifyDateTimePatternToParts('G')
+  simplifyDateTimePatternToParts('G', { letterCase: 'uppercase' })
 })
