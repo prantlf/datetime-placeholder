@@ -1,6 +1,6 @@
 {
   "name": "datetime-placeholder",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simplifies a date/time-formatting pattern using Unicode LDML tokens to a pattern usable in date/time pickers.",
   "author": {
     "name": "Ferdinand Prantl",
