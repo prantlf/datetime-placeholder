@@ -22,7 +22,7 @@ const placeholder = simplifyDateTimePattern('d.M.yy') // dd.mm.yy
 * ES, CJS and UMD module exports.
 * TypeScript type declarations (typings).
 * No other dependencies.
-* Tiny code base - 1.88 kB minified, 801 B gzipped, 731 B brotlied.
+* Tiny code base - 2.05 kB minified, 942 B gzipped, 834 B brotlied.
 
 Related projects:
 
